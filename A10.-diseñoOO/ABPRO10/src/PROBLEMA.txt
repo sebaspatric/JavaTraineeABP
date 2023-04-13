@@ -1,0 +1,71 @@
+PROBLEMA
+
+Desarrolle un programa que realice lo siguiente:
+
+Para efectos de simulación, el lugar de acción se simulará como una matriz compuesta de caracteres con
+15 filas y 15 columnas, en los que se dispondrán de forma aleatoria:
+
+o 3 Kromis, donde cada una utiliza tres celdas de la matriz y se ubican siempre de forma
+vertical. Cada celda ocupada por un vehículo de este tipo se define con una letra “K”.
+o 5 Caguanos, ubicados siempre horizontalmente en la matriz, definidos en ésta con una letra “C” y
+haciendo uso de dos espacios.
+o 10 Trupallas, los cuales se representan como una celda en la matriz con la letra “T”.
+
+El programa debe situar de forma aleatoria la cantidad de vehículos antes indicados. Se recomienda
+hacerlo en el orden antes mencionado, pero no es obligación. Considere que cada tipo de vehículo
+ocupará una determinada cantidad de celdas en la matriz, y que no pueden existir vehículos encima
+de otros.
+
+Por cada vehículo ingresado, entonces, se debe hacer lo siguiente:
+
+o El programa calcula una fila y columna de forma aleatoria (el número debe estar en el rango
+definido).
+o Si está agregando una Kromi, debe escribir tres celdas hacia abajo contando desde la celda
+obtenida, si es un Caguano debe rellenar dos celdas hacia el lado (de izquierda a derecha), mientras
+que, si el vehículo a registrar es un Trupalla, se debe agregar en la coordenada obtenida ya que
+solo usa una celda.
+o Antes de agregar un vehículo, se debe validar que no exista ningún otro en algunas de las posiciones
+que se considerará. De no ser así, se debe obtener nuevamente otro par de coordenadas de forma
+aleatoria hasta que sea posible ubicar el vehículo en cuestión sin inconvenientes.
+o Además, recuerde que todo vehículo debe quedar siempre situado dentro de la matriz, lo cual
+también se debe validar. Si las coordenadas obtenidas provocan que el vehículo no cumpla con
+esta condición, se debe solicitar otra fila y columna.
+
+Un ejemplo de matriz generada de forma posterior a este proceso es la que se muestra a
+continuación:
+
+T
+K T C C
+K
+K C C T
+T
+C C T
+T T K
+K
+K K
+K T T
+K
+C C C C
+T
+
+Los manifestantes, como método de defensa frente a la acción de la PKS, tienen un arsenal ilimitado
+de huevos, los que pueden lanzar libremente dentro del espacio considerado. Para representar
+esto, se debe solicitar al usuario que ingrese un número de fila y de columna, ambos válidos, y
+verificar si en la matriz está ubicado un vehículo o no:
+
+o Si el proyectil da sobre una Kromi, se asignan tres puntos, si da sobre un Caguano se asignan dos
+puntos, y si da sobre un Trupalla se asigna un punto.
+
+o Si una Kromi ha sido inutilizada completamente, esto es, que sus tres celdas han sido atacadas por
+huevos, se asignan 10 puntos adicionales. Si se inutiliza un Caguano se asignan 7 puntos adicionales.
+Un Trupalla queda inutilizado automáticamente al recibir un huevo, por tanto no existe puntaje
+adicional por estos efectos.
+
+- No hay una cantidad límite de huevos a lanzar, y un huevo puede caer más de una vez sobre una
+misma posición. Sin embargo, cada vez que una posición sea atacada por un huevo, el valor de la
+celda en la matriz original debe ser expresado como “H”. Si la celda sobre la que se lanza un huevo
+ya había sido atacada previamente, no se debe asignar puntaje por este concepto.
+
+- Finalmente, al terminar el programa se debe indicar el puntaje total obtenido por el usuario.
+
+

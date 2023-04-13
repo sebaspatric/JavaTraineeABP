@@ -1,0 +1,11 @@
+CONSIDERACIONES
+Finalmente debe tener en cuenta las siguientes consideraciones:
+• Se debe programar bajo el concepto de programación orientada a objetos, por ende, debe tener
+estructura de clases y superclases, conceptos de herencia y polimorfismos.
+• Se debe implementar la mayor cantidad de conceptos vistos en cada una de las clases, sin ser el
+total de ellos de carácter obligatorio.
+• Evitar la copia de código directo, tanto de Internet como de pares.
+• Se valorará la participación y el trabajo colaborativo.
+• La revisión se realizará durante clases.
+• Tendrá una duración máxima de 3 clases. Durante el último plazo, se revisará en uno de los
+equipos de los participantes.

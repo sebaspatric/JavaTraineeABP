@@ -1,0 +1,32 @@
+Proceso COVID
+	Definir salidoPais como logico; // ha salido del pais
+	Definir PCR como logico; //examen PCR
+	Definir contcerc como logico; //contagios cercanos
+	Definir cuarentena como logico; //contagios cercanos
+	Definir var como entero;
+	
+	Escribir "Ingrese Verdadero si ha salido del pais o Falso si no ha salido del país";
+	leer salidoPais;
+	escribir "Ha salido del país: ",salidoPais;
+		
+	Si (salidoPais=Verdadero) Entonces
+		cuarentena=Verdadero;
+		Mientras (cuarentena=Verdadero) Hacer
+			Escribir "------------------------";
+			Escribir "DEBE REALIZAR EXÁMENES";
+			Escribir "Ingrese resultado PCR VERDADERO o FALSO";
+			leer PCR;
+			Escribir "Ingrese presencia de contagios cercanos VERDADERO o FALSO";
+			leer contcerc;
+			si (PCR=Falso y contcerc=Falso) 
+				cuarentena=Falso;
+			FinSi
+		Fin Mientras
+	SiNo
+		Escribir "------------------------";
+		Escribir "puedes salir de cuarentena";
+		cuarentena=Falso;
+	Fin Si
+	
+FinProceso
+

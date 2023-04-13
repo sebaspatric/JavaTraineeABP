@@ -1,0 +1,56 @@
+REQUERIMIENTO MINIMOS: Clases
+
+Para resolver este problema se pide crear como mínimo las siguientes estructuras:
+
+- Clase “Carro”: es la clase padre que definirá los distintos vehículos que administra la PKS. De cada
+carro se interesa saber la cantidad de ocupantes, la fecha de ingreso a la institución y su ubicación
+en el tablero virtual de 15x15 (se recomienda registrar la fila y columna en atributos
+independientes). Debe tener un método que permita desplegar sus datos básicos y sus
+coordenadas en el tablero.
+- Clase “Kromi”: clase hija que representa una Kromi; se requiere saber su año de fabricación y su
+marca.
+- Clase “Caguano”: clase hija que representa un Caguano; de esta clase se interesa saber su alcance
+de tiro, y color de confeti que arroja.
+- Clase “Trupalla”: clase hija que representa un Trupalla; de este tipo de elemento interesa conocer
+su nivel de armadura (entero entre 1 a 5) y el nombre de la persona que lo manipula.
+- Clase “Huevo”: clase que define cada lanzamiento realizado dentro del tablero. Por cada instancia
+de esta clase se desea conocer la fila donde cayó el proyectil, la columna y el puntaje obtenido en
+el lanzamiento.
+- Clase “Tablero”: clase que representa el terreno en el que se ubica cada carro y en el cual se sitúan
+proyectiles. Esta clase debe contener dos atributos: una lista o arreglo de instancias de la clase
+“Carro” y una lista de instancias de la clase “Huevo”; se sabe que la primera lista no tendrá más de
+18 elementos, mientras que en el segundo no hay límite de instancias a crear. Esta clase, además,
+debe tener definidos los siguientes métodos:
+
+• Crear Carro: crea una subclase de la clase Carro y la asigna a la lista respectiva. Recuerde
+que las coordenadas del carro se calculan de forma aleatoria, y no se puede traslapar
+un carro con otro.
+• Lanzar Huevo: crea una instancia de la clase “Huevo”, solicita la coordenada de
+lanzamiento, asigna el puntaje al movimiento y la almacena en el listado correspondiente.
+• Mostrar Matriz: este método debe mostrar en forma de matriz cada uno de los carros
+existentes y los lanzamientos que se han registrado hasta el momento. Recuerde que
+donde hubo un lanzamiento debe haber una letra “H”, independiente de si acierta a un
+carro o no. Una vez que realiza la acción, debe calcular el puntaje obtenido hasta el
+momento.
+• Calcular puntaje: suma los puntajes asignados a cada lanzamiento y los entrega como
+resultado. Este método debe ser visible solo dentro de la clase, y es utilizado en los
+métodos de la misma clase. Clase “Huevo”: clase que define cada lanzamiento realizado
+dentro del tablero.
+
+
+Algunas acotaciones de índole general
+
+• Todas las clases deben estar acompañadas de sus métodos set, get y toString
+respectivos.
+• Toda clase debe tener declarado un constructor apropiado.
+• Para el desarrollo del problema puede usar matrices. Las puede declarar como atributos
+de alguna clase de las anteriores.
+• Puede considerar otras clases además de las antes mencionadas.
+• El programa debe contar con un menú que despliegue las acciones que
+contempla el programa, y debe mostrarse tantas veces sea necesario hasta el usuario
+indique lo contrario.
+
+
+
+
+
