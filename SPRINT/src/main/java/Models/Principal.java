@@ -2,6 +2,10 @@ package Models;
 
 import java.util.Scanner;
 
+import static Validation.ValCliente.esTelefonoValido;
+import static Validation.ValCliente.sonApellidosValidos;
+import static Validation.Validation.validarNombre;
+
 public class Principal {
     private Contenedor contenedor;
 
@@ -16,7 +20,8 @@ public class Principal {
         do {
             mostrarMenuPrincipal();
             opcion = leerOpcion(scanner);
-
+            String var2;
+            var2="";
             switch (opcion) {
                 case 1:
                     almacenarCliente(scanner);
@@ -50,7 +55,10 @@ public class Principal {
                     break;
             }
 
-            System.out.println();
+
+            System.out.println("Presione Cualquier tecla para continuar");
+            var2=scanner.nextLine();
+
         } while (opcion != 9);
 
         scanner.close();
@@ -81,7 +89,34 @@ public class Principal {
         // Lógica para almacenar un cliente en el contenedor
         // Puedes solicitar los datos necesarios al usuario y utilizar los métodos del contenedor para agregar el cliente
 
-        System.out.println("Almacenando un nuevo cliente...");
+        //System.out.println("Almacenando un nuevo cliente...");
+
+        // Solicitar los datos del cliente al usuario
+        //System.out.print("Ingrese el nombre del cliente: ");
+        //String nombre = scanner.nextLine();
+            String nombre = "ingenie";
+
+        //System.out.print("Ingrese el apellido del cliente: ");
+        //String apellido = scanner.nextLine();
+        String apellido = "ferna";
+        //System.out.print("Ingrese el teléfono del cliente: ");
+        //String telefono = scanner.nextLine();
+        String telefono = "55566565";
+        if (validarNombre(nombre) && esTelefonoValido(telefono) && sonApellidosValidos(apellido)) {
+            try {
+                // Crear una instancia de Cliente con los datos proporcionados
+                Cliente cliente = new Cliente();
+                cliente.setNombre(nombre);
+                cliente.setTelefono(telefono);
+                cliente.setApellidos(apellido);
+
+                // Agregar el cliente al contenedor
+                contenedor.almacenarCliente(cliente);
+                System.out.println("Almacenando un nuevo cliente...");
+            } catch (Exception e) {
+                System.out.println("error al ingresar");
+            }
+        } else {System.out.println("error al ingresar datos");}
     }
 
     private void almacenarProfesional(Scanner scanner) {
@@ -112,6 +147,7 @@ public class Principal {
         // Lógica para listar todos los usuarios del contenedor
         // Utiliza los métodos del contenedor para obtener la lista de usuarios y mostrar sus datos
         System.out.println("Listando usuarios...");
+        contenedor.listarUsuarios();
     }
 
     private void listarUsuariosPorTipo(Scanner scanner) {
